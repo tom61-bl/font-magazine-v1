@@ -1,0 +1,13 @@
+{
+  "name": "font-magazine",
+  "version": "1.0.0",
+  "description": "Bilingual font introduction magazine for art students",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
