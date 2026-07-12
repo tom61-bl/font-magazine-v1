@@ -1,2 +1,25 @@
 node_modules/
 .DS_Store
+
+# 环境变量 / 密钥
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 缓存 / 构建产物
+.cache/
+coverage/
+dist/
+build/
+
+# 操作系统 / 编辑器
+Thumbs.db
+*.swp
+.idea/
+.vscode/
