@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体的魅力 · The Charm of Type</title>
+  <meta name="description" content="字体的魅力 · The Charm of Type — 面向艺术生的双语字体入门杂志。认识宋体、黑体、楷书、综艺体，以及 Garamond、Bodoni 等经典西文字体。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="字体的魅力 · The Charm of Type">
+  <meta property="og:description" content="面向艺术生的双语字体入门杂志。">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="字体的魅力 · The Charm of Type">
+  <meta name="twitter:description" content="面向艺术生的双语字体入门杂志。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231a1a1a'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f5f3ee' font-family='serif'%3E字%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Lato:wght@300;400;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><span>■</span> TYPOGRAPHY</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"><span class="zh">首页</span><span class="en">Home</span></a></li>
+      <li><a href="#categories"><span class="zh">分类</span><span class="en">Categories</span></a></li>
+      <li><a href="#pairing"><span class="zh">配对</span><span class="en">Pairing</span></a></li>
+      <li><a href="#compare"><span class="zh">字体对比</span><span class="en">Compare</span></a></li>
+      <li><a href="#quiz"><span class="zh">字体测验</span><span class="en">Quiz</span></a></li>
+    </ul>
+    <button class="lang-btn" id="langToggle">EN / 中文</button>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-geo-1"></div>
+      <div class="hero-geo-2"></div>
+      <div class="hero-geo-3"></div>
+      <div class="hero-eyebrow">视觉字体入门指南 · A Visual Guide to Type</div>
+      <h1 class="hero-title"><span class="zh">字体的<br>魅力</span><span class="en">The Charm<br>of Type</span></h1>
+      <p class="hero-title-en">THE CHARM OF TYPOGRAPHY</p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">字体不只是文字的载体——它们是设计的语言、文化的载体、情绪的表达。走进字体世界，你会发现每一个笔画背后都有故事。</p>
+      <a href="#categories" class="hero-cta">开始探索 →</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-letter-grid">
+        <span>Aa</span><span>Bb</span><span>Cc</span><span>Dd</span>
+        <span>Ee</span><span>Ff</span><span>Gg</span><span>Hh</span>
+        <span>字</span><span>形</span><span>笔</span><span>墨</span>
+        <span>宋</span><span>黑</span><span>楷</span><span>艺</span>
+      </div>
+      <div class="hero-font-stack">
+        <div class="hero-font-line">宋韵</div>
+        <div class="hero-font-line">无界</div>
+        <div class="hero-font-line">Typography</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">字体分类</span><span class="en">Font Categories</span></h2>
+        <p class="section-subtitle">Font Categories — Know Your Type</p>
+      </div>
+    </div>
+    <div class="category-grid">
+      <div class="category-card reveal">
+        <div class="card-geo-bar"></div>
+        <div class="card-number">001</div>
+        <div class="card-label">Print / 印刷体</div>
+        <h3 class="card-title">宋体 · Songti</h3>
+        <p class="card-title-en">Ming & Song Typefaces</p>
+        <p class="card-desc">源于宋代雕版印刷，横细竖粗，笔画末端有装饰性衬脚。严谨、典雅、富有书卷气。</p>
+      </div>
+      <div class="category-card reveal">
+        <div class="card-geo-bar"></div>
+        <div class="card-number">002</div>
+        <div class="card-label">Sans-Serif / 无衬线</div>
+        <h3 class="card-title">黑体 · Heiti</h3>
+        <p class="card-title-en">Gothic & Sans-Serif</p>
+        <p class="card-desc">笔画均匀粗壮，没有装饰性衬脚。现代、简洁、有力，是屏幕时代的主角。</p>
+      </div>
+      <div class="category-card reveal">
+        <div class="card-geo-bar"></div>
+        <div class="card-number">003</div>
+        <div class="card-label">Handwriting / 手写体</div>
+        <h3 class="card-title">楷体 · Kaiti</h3>
+        <p class="card-title-en">Regular Script & Calligraphy</p>
+        <p class="card-desc">楷书的手写感，笔画流畅有力。亲和、温暖、有人的温度——最接近手写文字的印刷字体。</p>
+      </div>
+      <div class="category-card reveal">
+        <div class="card-geo-bar"></div>
+        <div class="card-number">004</div>
+        <div class="card-label">Creative / 创意字体</div>
+        <h3 class="card-title">综艺体 · Zongyi</h3>
+        <p class="card-title-en">Display & Decorative</p>
+        <p class="card-desc">打破规则的字体艺术，变形、夸张、打破边界。为标题而生，为表达而生。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONT PAIRING -->
+  <section class="pairing-section" id="pairing">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">字体配对推荐</span><span class="en">Font Pairing</span></h2>
+        <p class="section-subtitle">Font Pairing — Title + Body Combinations That Work</p>
+      </div>
+    </div>
+    <div class="pairing-intro">
+      <p>字体配对是设计的基本功。好的配对不是"两个好看的字体放在一起"，而是"一个负责吸引目光，一个负责传达信息"。选对组合，版面自然舒适；选错组合，信息就乱了。</p>
+    </div>
+    <div class="pairing-grid">
+
+      <!-- Pairing 1 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 01</div>
+        <div class="pairing-card-name">宋体 × 黑体</div>
+        <span class="pairing-card-tag">书籍 · 杂志 · 正式出版</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — 宋体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--serif-cn);">设计之书</div>
+            <div class="pairing-font-box-en" style="font-family: var(--serif-en);">Songti · Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — 黑体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-cn); font-weight: 400;">简约设计<br>以形出发</div>
+            <div class="pairing-font-box-en" style="font-family: var(--sans-en);">Heiti · Sans-Serif</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">中文最经典的正文字体组合。宋体衬脚引导视线，黑体简洁清晰，让读者在长篇阅读中不疲劳。适合书籍排版、学术杂志、正式出版物。</p>
+      </div>
+
+      <!-- Pairing 2 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 02</div>
+        <div class="pairing-card-name">黑体 × 宋体</div>
+        <span class="pairing-card-tag">海报 · 品牌 · 商业设计</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — 黑体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-cn); font-weight: 900;">打破边界</div>
+            <div class="pairing-font-box-en" style="font-family: var(--sans-en);">Heiti · Bold</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — 宋体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--serif-cn); font-weight: 400;">形随声起<br>意随字来</div>
+            <div class="pairing-font-box-en" style="font-family: var(--serif-en);">Songti · Body</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">黑体标题先声夺人，宋体正文提供文化底蕴。这组配对在商业品牌和文艺活动海报中极为常见，既有现代感，又有历史厚重感。</p>
+      </div>
+
+      <!-- Pairing 3 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 03</div>
+        <div class="pairing-card-name">Garamond × Lato</div>
+        <span class="pairing-card-tag">双语 · 国际 · 科技品牌</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — Playfair Display</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--display-en); font-weight: 700;">TIMELESS</div>
+            <div class="pairing-font-box-en" style="font-family: var(--serif-en);">Display Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — Lato</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-en); font-weight: 400;">Clean &<br>Precise</div>
+            <div class="pairing-font-box-en" style="font-family: var(--sans-en);">Humanist Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">英文字体经典配对。衬线标题传达权威感，无衬线正文保持可读性。这组组合在科技品牌和国际化设计中极为流行，Medium、GitHub 等平台都在使用。</p>
+      </div>
+
+      <!-- Pairing 4 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 04</div>
+        <div class="pairing-card-name">楷体 × 宋体</div>
+        <span class="pairing-card-tag">人文 · 品牌 · 文化类</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — 楷书</div>
+            <div class="pairing-font-box-sample" style="font-family: 'Noto Serif SC'; font-size: 1.5rem;">翰墨书香</div>
+            <div class="pairing-font-box-en" style="font-family: var(--hand-en);">Kaiti · Brush</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — 宋体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--serif-cn); font-weight: 400;">静以修身<br>俭以养德</div>
+            <div class="pairing-font-box-en" style="font-family: var(--serif-en);">Songti · Body</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">最具中国文化气质的配对。楷书的书法韵味传递人文情感，宋体的规整传达可信度。故宫博物院、叶圣陶手书等品牌都在用这组组合。</p>
+      </div>
+
+      <!-- Pairing 5 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 05</div>
+        <div class="pairing-card-name">综艺体 × 黑体</div>
+        <span class="pairing-card-tag">潮流 · 活动 · 视觉冲击</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — 综艺体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-cn); font-weight: 900; font-size: 1.5rem;">破界而出</div>
+            <div class="pairing-font-box-en" style="font-family: var(--sans-en);">Zongyi · Display</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — 黑体</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-cn); font-weight: 400;">重新定义<br>字体美学</div>
+            <div class="pairing-font-box-en" style="font-family: var(--sans-en);">Heiti · Body</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">潮流设计的标配组合。综艺体标题抓眼球，黑体正文提供功能性信息。适合演唱会海报、潮流品牌、创意活动等视觉设计。</p>
+      </div>
+
+      <!-- Pairing 6 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">配对 06</div>
+        <div class="pairing-card-name">Baskerville × Helvetica</div>
+        <span class="pairing-card-tag">高端 · 奢侈 · 精致感</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">标题 — Baskerville</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--serif-en); font-style: italic;">ELEGANT</div>
+            <div class="pairing-font-box-en" style="font-family: var(--serif-en);">Transitional Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">正文 — Helvetica</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--sans-en); font-weight: 400;">Timeless<br>Precision</div>
+            <div class="pairing-font-en" style="font-family: var(--sans-en);">Swiss Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">英文字体中"高段位"玩家的选择。Baskerville 的古典优雅配 Helvetica 的现代理性，在高端品牌和奢侈品牌的设计中极为常见。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRAND CASES -->
+  <section class="brand-section" id="brands">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">品牌字体案例</span><span class="en">Brand Type</span></h2>
+        <p class="section-subtitle">Font × Brand — When Typography Becomes Identity</p>
+      </div>
+    </div>
+    <div class="brand-grid">
+
+      <!-- Brand 1 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #1a1a1a; color: #fff; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic;">V</div>
+        <div class="brand-name">Vogue</div>
+        <div class="brand-name-en">时尚杂志 · 1892年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Bodoni</div>
+        <div class="brand-font-sample" style="font-family: var(--display-en); font-weight: 700; font-style: italic;">VOGUE</div>
+        <p class="brand-desc">Vogue 选择了 Bodoni——一种以极端粗细对比著称的字体。纤细的衬脚和厚重的笔画形成强烈戏剧感，完美契合时尚杂志追求优雅与奢华的品牌定位。</p>
+      </div>
+
+      <!-- Brand 2 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #003087; color: #fff; font-family: Arial, sans-serif; font-weight: 900;">BMW</div>
+        <div class="brand-name">BMW</div>
+        <div class="brand-name-en">汽车品牌 · 1916年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Helvetica（定制版）</div>
+        <div class="brand-font-sample" style="font-family: Arial, sans-serif; font-weight: 900;">BMW</div>
+        <p class="brand-desc">宝马的 logo 使用了高度几何化、精确的 Helvetica 风格字体。没有任何衬脚，没有任何多余装饰——完美的机械感与品牌"终极驾驶机器"的定位高度一致。</p>
+      </div>
+
+      <!-- Brand 3 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #fff; border: 2px solid #1a1a1a; font-family: Georgia, serif; font-size: 0.7rem; font-weight: bold;">PENGUIN</div>
+        <div class="brand-name">Penguin Books</div>
+        <div class="brand-name-en">出版品牌 · 1935年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Garamond（定制 Penguin 版）</div>
+        <div class="brand-font-sample" style="font-family: var(--serif-en); font-style: italic; font-size: 1.2rem;">Penguin Books</div>
+        <p class="brand-desc">Penguin Books 在 1935 年选择了 Garamond 作为品牌字体。这个决定定义了这个出版帝国数十年的视觉形象——温暖、可信、富有书卷气，至今依然是书籍设计的标杆。</p>
+      </div>
+
+      <!-- Brand 4 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--red); color: #fff; font-family: Arial, sans-serif; font-weight: 900; font-size: 1rem;">NYC</div>
+        <div class="brand-name">纽约地铁</div>
+        <div class="brand-name-en">城市交通 · 1970年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Helvetica Bold（城市 Subway 字体）</div>
+        <div class="brand-font-sample" style="font-family: Arial, sans-serif; font-weight: 900; font-size: 0.9rem;">42ND STREET</div>
+        <p class="brand-desc">纽约地铁识别系统采用了 Helvetica 粗体，在高速移动、嘈杂的地铁环境中保持高度可读性。功能性第一的原则，让这套视觉系统在 50 年后依然在用。</p>
+      </div>
+
+      <!-- Brand 5 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--black); color: #fff; font-size: 0.5rem; font-family: Arial, sans-serif; letter-spacing: 0.1em;">VOLKSWAGEN</div>
+        <div class="brand-name">Volkswagen</div>
+        <div class="brand-name-en">汽车品牌 · 1937年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Futura（定制版）</div>
+        <div class="brand-font-sample" style="font-family: var(--sans-en); font-weight: 300; font-size: 1.2rem; letter-spacing: 0.2em;">VOLKSWAGEN</div>
+        <p class="brand-desc">大众汽车选择了 Futura——一种完全由几何形状构建的字体。圆形、三角形、直线，与汽车的机械美学高度呼应。品牌标志下的Volkswagen文字至今仍用 Futura。</p>
+      </div>
+
+      <!-- Brand 6 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--yellow); color: var(--black); font-size: 0.6rem; font-family: Arial, sans-serif; font-weight: bold;">ABSOLUT</div>
+        <div class="brand-name">Absolut Vodka</div>
+        <div class="brand-name-en">酒类品牌 · 1979年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Futura Condensed（品牌定制）</div>
+        <div class="brand-font-sample" style="font-family: var(--sans-en); font-weight: 300; font-size: 1.1rem; letter-spacing: 0.15em;">ABSOLUT</div>
+        <p class="brand-desc">Absolut 的品牌字体与酒瓶形状高度契合——细长、高挑、一切都是垂直的。Futura 的几何感让品牌在数千款酒瓶中脱颖而出，成为平面设计史上的经典案例。</p>
+      </div>
+
+      <!-- Brand 7 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--black); color: #fff; font-family: Georgia, serif; font-style: italic;">The New<br> Yorker</div>
+        <div class="brand-name">The New Yorker</div>
+        <div class="brand-name-en">杂志 · 1925年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Janet B. Morris（定制版衬线）</div>
+        <div class="brand-font-sample" style="font-family: Georgia, serif; font-style: italic; font-size: 1rem;">The New Yorker</div>
+        <p class="brand-desc">《纽约客》选择了高度定制化的衬线字体，其浑圆的字形和手写感传达了杂志的文人气质和幽默感。这套字体与杂志内容的完美匹配，让它成为杂志排版的教科书级案例。</p>
+      </div>
+
+      <!-- Brand 8 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--blue); color: #fff; font-size: 0.6rem; font-family: Arial, sans-serif; letter-spacing: 0.05em;">HARVARD<br>UNIVERSITY</div>
+        <div class="brand-name">Harvard University</div>
+        <div class="brand-name-en">学术机构 · 1636年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Baskerville（学术定制版）</div>
+        <div class="brand-font-sample" style="font-family: Georgia, serif; font-size: 1rem;">Harvard</div>
+        <p class="brand-desc">哈佛大学的视觉系统以 Baskerville 为基础，其古典优雅与学术权威感完美契合。一个好的字体选择，能让数百年的学术传统在视觉上一眼可辨。</p>
+      </div>
+
+      <!-- Brand 9 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #f0f0f0; font-size: 0.5rem; font-family: 'Courier New', monospace; letter-spacing: 0.05em;">GITHUB</div>
+        <div class="brand-name">GitHub</div>
+        <div class="brand-name-en">科技公司 · 2008年</div>
+        <div class="brand-font-used">使用字体</div>
+        <div class="brand-font-name">Roboto（系统）+ 等宽字体</div>
+        <div class="brand-font-sample" style="font-family: 'Courier New', monospace; font-size: 1rem; letter-spacing: 0.1em;">github</div>
+        <p class="brand-desc">GitHub 的品牌字体融合了现代无衬线（Roboto 用于 UI）和等宽字体（程序员代码感）。这组选择精准对应了开发者社区的身份认同——代码就是文字，文字就是代码。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FONT QUIZ -->
+  <section class="quiz-section" id="quiz">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">字体测验</span><span class="en">Font Quiz</span></h2>
+        <p class="section-subtitle">Font Quiz — Find Your Perfect Typeface</p>
+      </div>
+    </div>
+
+    <div class="quiz-container">
+      <!-- LEFT: Questions -->
+      <div>
+        <!-- Start Screen -->
+        <div class="quiz-start active" id="quizStart">
+          <div class="quiz-title">找到最适合你的字体</div>
+          <div class="quiz-title-en">Find Your Perfect Typeface</div>
+          <p style="font-size:0.88rem;color:var(--gray);line-height:1.8;margin-bottom:2rem;max-width:480px;">回答 4 个简单问题，我会推荐最适合你的字体类型。不需要任何设计基础，跟着直觉走就好。</p>
+          <button class="quiz-restart-btn" id="quizStartBtn" style="background:var(--red);">开始测验 →</button>
+        </div>
+
+        <!-- Q1 -->
+        <div class="quiz-question-block" id="q1">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:25%"></div></div>
+            <span class="quiz-progress-text">Q1 / 4</span>
+          </div>
+          <div class="quiz-question-text">你设计的东西，最主要的用途是什么？</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(1,'a')">
+              <span class="quiz-option-letter">A</span>书籍、杂志或长篇文章的正文排版
+            </button>
+            <button class="quiz-option" onclick="answer(1,'b')">
+              <span class="quiz-option-letter">B</span>海报、Logo 或需要立刻抓住眼球的视觉
+            </button>
+            <button class="quiz-option" onclick="answer(1,'c')">
+              <span class="quiz-option-letter">C</span>App界面、网页或数字产品
+            </button>
+            <button class="quiz-option" onclick="answer(1,'d')">
+              <span class="quiz-option-letter">D</span>有文化感、传统感、人文气息的设计
+            </button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-question-block" id="q2">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:50%"></div></div>
+            <span class="quiz-progress-text">Q2 / 4</span>
+          </div>
+          <div class="quiz-question-text">你希望别人感受到什么气质？</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(2,'a')">
+              <span class="quiz-option-letter">A</span>温暖、人文、像手写的一样亲近
+            </button>
+            <button class="quiz-option" onclick="answer(2,'b')">
+              <span class="quiz-option-letter">B</span>精确、理性、像机器一样可靠
+            </button>
+            <button class="quiz-option" onclick="answer(2,'c')">
+              <span class="quiz-option-letter">C</span>权威、典雅、有历史厚重感
+            </button>
+            <button class="quiz-option" onclick="answer(2,'d')">
+              <span class="quiz-option-letter">D</span>大胆、戏剧化、有强烈视觉冲击
+            </button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-question-block" id="q3">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:75%"></div></div>
+            <span class="quiz-progress-text">Q3 / 4</span>
+          </div>
+          <div class="quiz-question-text">你的读者群体是？</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(3,'a')">
+              <span class="quiz-option-letter">A</span>大众消费者，普通读者
+            </button>
+            <button class="quiz-option" onclick="answer(3,'b')">
+              <span class="quiz-option-letter">B</span>年轻人、创意行业、前沿受众
+            </button>
+            <button class="quiz-option" onclick="answer(3,'c')">
+              <span class="quiz-option-letter">C</span>专业人士、学术圈、商务人士
+            </button>
+            <button class="quiz-option" onclick="answer(3,'d')">
+              <span class="quiz-option-letter">D</span>高端用户、奢侈品牌、时尚受众
+            </button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-question-block" id="q4">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:100%"></div></div>
+            <span class="quiz-progress-text">Q4 / 4</span>
+          </div>
+          <div class="quiz-question-text">最后，你更偏向哪种文化气质？</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(4,'a')">
+              <span class="quiz-option-letter">A</span>中文/东方传统，书卷气
+            </button>
+            <button class="quiz-option" onclick="answer(4,'b')">
+              <span class="quiz-option-letter">B</span>西方现代主义，简洁功能
+            </button>
+            <button class="quiz-option" onclick="answer(4,'c')">
+              <span class="quiz-option-letter">C</span>经典传统，文艺复兴感
+            </button>
+            <button class="quiz-option" onclick="answer(4,'d')">
+              <span class="quiz-option-letter">D</span>打破常规，创意表现
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Result -->
+      <div class="quiz-result-panel">
+        <div class="quiz-result active" id="quizResult">
+          <div class="quiz-result-badge">推荐结果</div>
+          <div class="quiz-result-font-name" id="resultName">—</div>
+          <div class="quiz-result-font-en" id="resultEn">—</div>
+          <div class="quiz-result-match" id="resultMatch"></div>
+          <div class="quiz-result-desc" id="resultDesc">—</div>
+          <div class="quiz-result-sample" id="resultSample" style="font-family:var(--sans-cn);">—</div>
+          <div class="quiz-result-tags" id="resultTags"></div>
+          <button class="quiz-restart-btn" onclick="restartQuiz()" style="margin-top:1.5rem;">重新测验 ↺</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY COLLECTION -->
+  <section class="collection-section" id="collection">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">我的收藏</span><span class="en">My Collection</span></h2>
+        <p class="section-subtitle">My Collection — Save Your Favorites</p>
+      </div>
+    </div>
+    <div class="collection-bar">
+      <span class="collection-bar-title">点击卡片添加收藏 · Click to Add</span>
+      <span class="collection-count" id="collectionCount">0 font(s) saved</span>
+      <button class="collection-btn" id="clearCollection">清空全部</button>
+    </div>
+    <div class="collection-grid" id="collectionGrid">
+      <div class="collection-card" data-font="serif-cn" data-name="宋体 Songti">
+        <div class="collection-card-font" style="font-family: var(--serif-cn);">宋</div>
+        <div class="collection-card-name">宋体 Songti</div>
+      </div>
+      <div class="collection-card" data-font="sans-cn" data-name="黑体 Heiti">
+        <div class="collection-card-font" style="font-family: var(--sans-cn); font-weight: 900;">黑</div>
+        <div class="collection-card-name">黑体 Heiti</div>
+      </div>
+      <div class="collection-card" data-font="fangsong" data-name="仿宋 Fangsong">
+        <div class="collection-card-font" style="font-family: var(--serif-cn); font-weight: 400;">仿</div>
+        <div class="collection-card-name">仿宋 Fangsong</div>
+      </div>
+      <div class="collection-card" data-font="serif-en" data-name="Garamond">
+        <div class="collection-card-font" style="font-family: var(--serif-en);">Aa</div>
+        <div class="collection-card-name">Garamond</div>
+      </div>
+      <div class="collection-card" data-font="sans-en" data-name="Lato">
+        <div class="collection-card-font" style="font-family: var(--sans-en); font-weight: 700;">Aa</div>
+        <div class="collection-card-name">Lato</div>
+      </div>
+      <div class="collection-card" data-font="display-en" data-name="Playfair Display">
+        <div class="collection-card-font" style="font-family: var(--display-en); font-weight: 700;">Aa</div>
+        <div class="collection-card-name">Playfair Display</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="comparison-section" id="compare">
+    <div class="compare-header">
+      <div class="section-header" style="padding: 0; border-bottom: none;">
+        <div class="section-number">06</div>
+        <div class="section-title-group" style="border-bottom: none; padding-bottom: 0;">
+          <h2 class="section-title"><span class="zh">字体对比</span><span class="en">Compare</span></h2>
+          <p class="section-subtitle">Font Comparison Tool — See the Difference</p>
+        </div>
+      </div>
+      <p class="compare-instructions">选择两种字体，输入任意文字，直观感受它们的气质差异。</p>
+    </div>
+    <div class="compare-controls">
+      <div class="font-selector">
+        <label class="selector-label">字体 A · Font A</label>
+        <select class="font-select" id="fontA">
+          <option value="serif">宋体 Songti</option>
+          <option value="fangsong">仿宋 Fangsong</option>
+          <option value="heiti">黑体 Heiti</option>
+          <option value="garamond">Garamond</option>
+          <option value="bodoni">Playfair Display</option>
+          <option value="helvetica">Lato / Helvetica</option>
+        </select>
+      </div>
+      <div class="compare-vs">VS</div>
+      <div class="font-selector">
+        <label class="selector-label">字体 B · Font B</label>
+        <select class="font-select" id="fontB">
+          <option value="serif">宋体 Songti</option>
+          <option value="fangsong" selected>仿宋 Fangsong</option>
+          <option value="heiti">黑体 Heiti</option>
+          <option value="garamond">Garamond</option>
+          <option value="bodoni">Playfair Display</option>
+          <option value="helvetica">Lato / Helvetica</option>
+        </select>
+      </div>
+    </div>
+    <div class="compare-preview-area">
+      <input type="text" class="compare-text-input" id="compareInput" placeholder="输入任意文字..." value="明月几时有，把酒问青天">
+      <div class="compare-panels">
+        <div class="compare-panel">
+          <div class="panel-font-label" id="panelALabel">宋体 Songti</div>
+          <div class="panel-sample" id="panelA" style="font-family: var(--serif-cn)">明月几时有<br>把酒问青天</div>
+          <div class="panel-en-sample" id="panelAEn" style="font-family: var(--serif-en)">"Typography is two-dimensional architecture."</div>
+        </div>
+        <div class="compare-panel">
+          <div class="panel-font-label" id="panelBLabel">仿宋 Fangsong</div>
+          <div class="panel-sample" id="panelB" style="font-family: var(--serif-cn); font-weight: 400">明月几时有<br>把酒问青天</div>
+          <div class="panel-en-sample" id="panelBEn" style="font-family: var(--serif-en); font-weight: 400">"Typography is two-dimensional architecture."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAMILY TREE -->
+  <section class="tree-section" id="tree">
+    <div class="section-header" style="padding: 0 0 3rem; border-bottom: 3px solid var(--black); margin-bottom: 3rem;">
+      <div class="section-number">07</div>
+      <div class="section-title-group">
+        <h2 class="section-title"><span class="zh">字族图谱</span><span class="en">Type Families</span></h2>
+        <p class="section-subtitle">Font Family Tree — The Typographic Universe</p>
+      </div>
+    </div>
+    <div class="tree-container">
+      <p class="tree-label">字体的两大分支 · The Two Major Branches</p>
+      <div class="tree-row" style="justify-content: space-around; flex-wrap: wrap; gap: 2rem;">
+        <div class="tree-node serif" style="min-width:140px;">SERIF<br><span style="font-size:0.6rem;font-weight:400">衬线体</span></div>
+        <div class="tree-node sans" style="min-width:140px;">SANS-SERIF<br><span style="font-size:0.6rem;font-weight:400">无衬线体</span></div>
+      </div>
+      <div style="display:flex; justify-content:space-around; gap:4rem; flex-wrap:wrap; margin-top:1.5rem;">
+        <div style="text-align:center;">
+          <p class="tree-label">衬线体家族</p>
+          <div class="tree-branch"><div class="tree-node serif">宋体 Songti</div></div>
+          <div class="tree-branch">
+            <div class="tree-node serif" style="font-size:0.65rem;min-width:80px;">报宋</div>
+            <div class="tree-node serif" style="font-size:0.65rem;min-width:80px;">书宋</div>
+            <div class="tree-node serif" style="font-size:0.65rem;min-width:80px;">仿宋</div>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <p class="tree-label">无衬线体家族</p>
+          <div class="tree-branch"><div class="tree-node sans">黑体 Heiti</div></div>
+          <div class="tree-branch">
+            <div class="tree-node sans" style="font-size:0.65rem;min-width:80px;">中黑</div>
+            <div class="tree-node sans" style="font-size:0.65rem;min-width:80px;">细黑</div>
+            <div class="tree-node sans" style="font-size:0.65rem;min-width:80px;">综艺</div>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <p class="tree-label">创意 & 手写体</p>
+          <div class="tree-branch"><div class="tree-node hand">书法体 Brush</div></div>
+          <div class="tree-branch">
+            <div class="tree-node hand" style="font-size:0.65rem;min-width:80px;">行书</div>
+            <div class="tree-node hand" style="font-size:0.65rem;min-width:80px;">行楷</div>
+            <div class="tree-node hand" style="font-size:0.65rem;min-width:80px;">草书</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">字体的魅力</div>
+        <div class="footer-tagline">The Charm of Typography — A Visual Guide for Art Students</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#categories">分类</a></li>
+          <li><a href="#pairing">字体配对</a></li>
+          <li><a href="#compare">字体对比</a></li>
+          <li><a href="#quiz">字体测验</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a></li>
+          <li><a href="https://fonts.adobe.com" target="_blank">Adobe Fonts</a></li>
+          <li><a href="https://www.typewolf.com" target="_blank">Typewolf</a></li>
+          <li><a href="https://dafont.com" target="_blank">DaFont</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Font Magazine · Educational Purpose</span>
+      <span>字体仅供学习演示使用</span>
+    </div>
+  </footer>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
