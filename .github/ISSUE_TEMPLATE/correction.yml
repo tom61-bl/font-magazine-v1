@@ -1,0 +1,29 @@
+name: 勘误或补充来源
+description: 报告术语、事实、翻译、链接或来源问题。
+title: "[勘误] "
+labels: ["content: correction", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "谢谢你帮助项目变得更准确。请尽量提供可公开核对的来源。"
+  - type: input
+    id: location
+    attributes:
+      label: 问题出现在哪里？
+      placeholder: "例如：中文专题 > 衬线体 > 第二段"
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 需要更正或补充什么？
+      placeholder: "请说明当前表述、建议修改及原因。"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 参考来源
+      placeholder: "请附上原始链接、馆藏页、出版信息或其他可核对来源。"
+    validations:
+      required: true

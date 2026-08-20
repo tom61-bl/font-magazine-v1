@@ -1,0 +1,26 @@
+name: 翻译或术语建议
+description: 改进中文、英文或未来多语种内容的准确性与可读性。
+title: "[语言] "
+labels: ["content: language", "good first issue"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 文本位置
+      placeholder: "页面、模块或术语名称"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前文本与建议文本
+      placeholder: "请同时写出当前表述和建议版本。"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: 修改理由或参考来源
+      placeholder: "为什么这样更准确、更自然或更适合初学者？"
+    validations:
+      required: true

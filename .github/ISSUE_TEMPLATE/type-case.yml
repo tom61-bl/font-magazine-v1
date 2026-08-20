@@ -1,0 +1,29 @@
+name: 推荐真实字体案例
+description: 推荐一页书、一张海报、一个招牌、导视、包装或其他值得细读的字体对象。
+title: "[案例] "
+labels: ["content: case-study", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "请不要上传你无权分享的图片；优先提供原始链接、你自己的拍摄说明或明确许可信息。"
+  - type: input
+    id: object
+    attributes:
+      label: 这是什么对象？
+      placeholder: "例如：某本书的内页、某城市的一块导视牌"
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: 为什么它值得被细读？
+      placeholder: "你希望读者观察哪一处字体细节？"
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: 来源与使用状态
+      placeholder: "原始链接、拍摄者、地点/日期、已知版权或许可信息。"
+    validations:
+      required: true
