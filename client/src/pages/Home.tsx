@@ -126,6 +126,8 @@ export default function Home() {
           <button onClick={() => navigate("compare")}>同文对比</button>
           <button onClick={() => navigate("tips")}>读字提示</button>
           <a className="topic-link" href="/latin">英文字体</a>
+          <a className="nav-plain-link" href="/quiz">字体测验</a>
+          <a className="nav-plain-link" href="/pairing">配对与品牌</a>
           <a className="nav-plain-link" href="/learn">学习路径</a>
           <a className="nav-plain-link" href="/contribute">参与项目</a>
         </nav>

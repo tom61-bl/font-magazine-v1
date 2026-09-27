@@ -9,6 +9,8 @@ import Glossary from "./pages/Glossary";
 import Home from "./pages/Home";
 import LatinTypography from "./pages/LatinTypography";
 import LearningPath from "./pages/LearningPath";
+import Pairing from "./pages/Pairing";
+import Quiz from "./pages/Quiz";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/latin" component={LatinTypography} />
+        <Route path="/quiz" component={Quiz} />
+        <Route path="/pairing" component={Pairing} />
         <Route path="/learn" component={LearningPath} />
         <Route path="/glossary" component={Glossary} />
         <Route path="/contribute" component={Contribute} />

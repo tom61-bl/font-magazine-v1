@@ -132,6 +132,8 @@ export default function LatinTypography() {
           <button onClick={() => navigate("latin-compare")}>同文对比</button>
           <button onClick={() => navigate("latin-tips")}>观察字母</button>
           <a className="topic-link" href="/">中文专题</a>
+          <a className="nav-plain-link" href="/quiz">字体测验</a>
+          <a className="nav-plain-link" href="/pairing">配对与品牌</a>
           <a className="nav-plain-link" href="/learn">学习路径</a>
           <a className="nav-plain-link" href="/contribute">参与项目</a>
         </nav>

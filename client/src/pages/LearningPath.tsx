@@ -11,7 +11,9 @@ const MODULES = [
 export default function LearningPath() {
   return (
     <div className="education-page">
-      <header className="education-header"><a href="/" className="education-brand"><span className="education-mark">字</span><span>字研室 <i>TYPE ATLAS</i></span></a><nav><a href="/">中文专题</a><a href="/latin">英文字体</a><a className="is-active" href="/learn">学习路径</a><a href="/glossary">术语表</a><a href="/contribute">参与项目</a></nav></header>
+      <header className="education-header"><a href="/" className="education-brand"><span className="education-mark">字</span><span>字研室 <i>TYPE ATLAS</i></span></a><nav><a href="/">中文专题</a><a href="/latin">英文字体</a><a className="is-active" href="/quiz">字体测验</a>
+          <a className="is-active" href="/pairing">配对与品牌</a>
+          <a className="is-active" href="/learn">学习路径</a><a href="/glossary">术语表</a><a href="/contribute">参与项目</a></nav></header>
       <main>
         <section className="education-hero"><span className="education-hero-glyph" aria-hidden="true">Aa</span><div><p className="section-code">COURSE MAP / 01—04</p><h1>不要急着记住名字。<br /><i>先学会看见文字。</i></h1><p>《字体的魅力》会从互动分类开始，逐步走向字形、阅读、真实语境与中英混排。每一章都应让你多拥有一个能带回现实世界的观察方法。</p><a className="ink-button" href="#modules">从第一章开始 <ArrowDownRight size={17} /></a></div><aside><span>LEARN BY</span><b>SEEING<br />→ NAMING<br />→ TESTING</b><em>不是答案库，是一条练习观察的路径。</em></aside></section>
         <section className="learning-principle"><Quote size={27} /><p>好的科普不替你做判断；它给你一个能反复使用的观察框架。</p><span>— 字研室的编辑原则</span></section>
