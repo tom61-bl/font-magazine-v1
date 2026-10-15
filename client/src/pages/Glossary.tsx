@@ -1,5 +1,6 @@
 /** 活字标本册设计契约：术语表服务观察与回查，避免把专业词汇变成不必要的门槛。 */
 import { ArrowUpRight, BookMarked, Search } from "lucide-react";
+import { sitePath } from "@/lib/sitePath";
 
 const TERMS = [
   { term: "衬线 / Serif", en: "Serif", text: "字形笔画末端附带的短小收笔。它会影响文字的节奏与历史感。", section: "中文 / 英文", glyph: "R" },
@@ -14,8 +15,8 @@ const TERMS = [
 
 export default function Glossary() {
   return (
-    <div className="education-page glossary-page"><header className="education-header"><a href="/" className="education-brand"><span className="education-mark">字</span><span>字研室 <i>TYPE ATLAS</i></span></a><nav><a href="/">中文专题</a><a href="/latin">英文字体</a><a href="/quiz">字体测验</a>
-          <a href="/pairing">配对与品牌</a>
-          <a href="/learn">学习路径</a><a className="is-active" href="/glossary">术语表</a><a href="/contribute">参与项目</a></nav></header><main><section className="glossary-hero"><span className="glossary-glyph" aria-hidden="true">g</span><p className="section-code">GLOSSARY / FIRST EDITION</p><h1>把看见的东西，<br /><i>慢慢说清楚。</i></h1><p>术语不是用来制造门槛的。它只是给你一个更准确的词，让你能记下已经观察到的字形差异。</p><div><Search size={17} /><span>首期收录 08 个基础词汇 · 持续补充中</span></div></section><section className="term-grid">{TERMS.map((item, index) => <article key={item.term}><span>{String(index + 1).padStart(2, "0")} / {item.section}</span><b className="term-glyph" aria-hidden="true">{item.glyph}</b><h2>{item.term}</h2><em>{item.en}</em><p>{item.text}</p></article>)}</section><section className="glossary-footnote"><BookMarked size={22} /><p>如果有一个你想弄懂的字体术语，欢迎将它提交到项目议题。我们会优先把高频问题写成可读、可查、可继续探索的词条。</p><a href="/contribute">推荐一个术语 <ArrowUpRight size={15} /></a></section></main><footer className="education-footer"><span>字研室 · TYPE ATLAS</span><a href="/learn">返回学习路径 <ArrowUpRight size={14} /></a></footer></div>
+    <div className="education-page glossary-page"><header className="education-header"><a href={sitePath("/")} className="education-brand"><span className="education-mark">字</span><span>字体志 <i>字体的魅力</i></span></a><nav><a href={sitePath("/")}>中文专题</a><a href={sitePath("/latin")}>英文字体</a><a href={sitePath("/quiz")}>字体测验</a>
+          <a href={sitePath("/pairing")}>配对与品牌</a>
+          <a href={sitePath("/learn")}>学习路径</a><a className="is-active" href={sitePath("/glossary")}>术语表</a><a href={sitePath("/contribute")}>参与项目</a></nav></header><main><section className="glossary-hero"><span className="glossary-glyph" aria-hidden="true">g</span><p className="section-code">GLOSSARY / FIRST EDITION</p><h1>把看见的东西，<br /><i>慢慢说清楚。</i></h1><p>术语不是用来制造门槛的。它只是给你一个更准确的词，让你能记下已经观察到的字形差异。</p><div><Search size={17} /><span>首期收录 08 个基础词汇 · 持续补充中</span></div></section><section className="term-grid">{TERMS.map((item, index) => <article key={item.term}><span>{String(index + 1).padStart(2, "0")} / {item.section}</span><b className="term-glyph" aria-hidden="true">{item.glyph}</b><h2>{item.term}</h2><em>{item.en}</em><p>{item.text}</p></article>)}</section><section className="glossary-footnote"><BookMarked size={22} /><p>如果有一个你想弄懂的字体术语，欢迎将它提交到项目议题。我们会优先把高频问题写成可读、可查、可继续探索的词条。</p><a href={sitePath("/contribute")}>推荐一个术语 <ArrowUpRight size={15} /></a></section></main><footer className="education-footer"><span>字体志</span><a href="https://tom61-bl.github.io/light-shadow/">光影志</a><a href="https://tom61-bl.github.io/color-atlas/">色彩志</a><a href={sitePath("/learn")}>返回学习路径 <ArrowUpRight size={14} /></a></footer></div>
   );
 }

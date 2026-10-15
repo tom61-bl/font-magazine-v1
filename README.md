@@ -1,4 +1,6 @@
-# 字体的魅力 · The Charm of Type
+# 字体志 · 字体的魅力
+
+书名是「字体志」。这一期的标题是《字体的魅力》。同一套杂志还有 [光影志](https://tom61-bl.github.io/light-shadow/) 和 [色彩志](https://tom61-bl.github.io/color-atlas/)。
 
 > **一个面向大众的开源互动字体图谱。** 输入一句话，亲眼看见中文与英文字形如何改变语气、节奏和阅读感受。
 
@@ -55,7 +57,11 @@ pnpm run build
 
 ## 许可证状态
 
-代码、文字内容和视觉资产的正式开放许可仍在确定中。**在 `LICENSE` 文件加入前，请勿假定项目内容、案例图片或视觉资产可以任意复制、再发布或商用。** 欢迎在 [Issue](https://github.com/tom61-bl/font-magazine-v1/issues) 中提出适合公共教育项目的许可建议；最终选择将由维护者确认。
+代码、文字内容和视觉资产的正式开放许可仍在确定中。`package.json` 因此标为 `UNLICENSED`，不再单独宣称 MIT。**在 `LICENSE` 文件加入前，请勿假定项目内容、案例图片或视觉资产可以任意复制、再发布或商用。** 欢迎在 [Issue](https://github.com/tom61-bl/font-magazine-v1/issues) 中提出适合公共教育项目的许可建议；最终选择将由维护者确认。
+
+## 发布的是哪一版
+
+线上站点由 `client/` 构建。仓库根目录曾经有一套静态页，已移到 `archive/static-v0/`，不要再把它当成入口。构建不再依赖 Manus 插件。
 
 ## 致谢
 

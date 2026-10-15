@@ -4,12 +4,13 @@
 import { useMemo, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, ScanEye, X } from "lucide-react";
 import SourcePanel from "@/components/SourcePanel";
+import { publicAsset, sitePath } from "@/lib/sitePath";
 
 const ASSETS = {
-  hero: "/assets/type-atlas-hero.jpg",
-  specimen: "/assets/type-atlas-specimen.jpg",
-  comparison: "/assets/type-atlas-pairing.jpg",
-  mark: "/assets/type-atlas-mark.png",
+  hero: publicAsset("type-atlas-hero.jpg"),
+  specimen: publicAsset("type-atlas-specimen.jpg"),
+  comparison: publicAsset("type-atlas-pairing.jpg"),
+  mark: publicAsset("type-atlas-mark.png"),
 };
 
 type Category = {
@@ -26,6 +27,7 @@ type Category = {
   example: string;
   cue: string;
   fontClass: string;
+  standIn?: string;
 };
 
 const CATEGORIES: Category[] = [
@@ -73,6 +75,7 @@ const CATEGORIES: Category[] = [
     example: "慢慢写下",
     cue: "看笔势：它像不像一支笔正在完成一次真实的书写？",
     fontClass: "font-hand",
+    standIn: "样张是马善政毛笔楷书，用来看手写这一类，不是楷体字库本身。",
   },
   {
     id: "display",
@@ -88,10 +91,21 @@ const CATEGORIES: Category[] = [
     example: "现在开场",
     cue: "看远处：缩小后，它是否仍然保留了独特的轮廓和气势？",
     fontClass: "font-display",
+    standIn: "样张是站酷快乐体，用来看展示体这一类，不是综艺体字库本身。",
   },
 ];
 
 const DEFAULT_SAMPLE = "字体不只是文字的外衣，它也在决定一句话如何被感受。";
+
+function WeightSample() {
+  const [weight, setWeight] = useState(400);
+  return (
+    <div className="weight-sample">
+      <b style={{ fontWeight: weight }}>字有重量</b>
+      <label>字重 {weight}<input type="range" min="400" max="900" step="100" value={weight} onChange={(event) => setWeight(Number(event.target.value))} /></label>
+    </div>
+  );
+}
 
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -119,17 +133,18 @@ export default function Home() {
       <header className="site-header" aria-label="字体的魅力主导航">
         <button className="brand-lockup" onClick={() => navigate("top")} aria-label="回到首页">
           <img src={ASSETS.mark} alt="" className="brand-mark" />
-          <span className="brand-word"><b>字研室</b><em>TYPE ATLAS</em></span>
+          <span className="brand-word"><b>字体志</b><em>字体的魅力</em></span>
         </button>
         <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="页面章节">
           <button onClick={() => navigate("categories")}>认识字体</button>
+          <button onClick={() => navigate("anatomy")}>字形解剖</button>
           <button onClick={() => navigate("compare")}>同文对比</button>
           <button onClick={() => navigate("tips")}>读字提示</button>
-          <a className="topic-link" href="/latin">英文字体</a>
-          <a className="nav-plain-link" href="/quiz">字体测验</a>
-          <a className="nav-plain-link" href="/pairing">配对与品牌</a>
-          <a className="nav-plain-link" href="/learn">学习路径</a>
-          <a className="nav-plain-link" href="/contribute">参与项目</a>
+          <a className="topic-link" href={sitePath("/latin")}>英文字体</a>
+          <a className="nav-plain-link" href={sitePath("/quiz")}>字体测验</a>
+          <a className="nav-plain-link" href={sitePath("/pairing")}>配对与品牌</a>
+          <a className="nav-plain-link" href={sitePath("/learn")}>学习路径</a>
+          <a className="nav-plain-link" href={sitePath("/contribute")}>参与项目</a>
         </nav>
         <div className="header-tools">
           <span className="edition-chip"><span className="edition-dot" /> 美学科普 / 01</span>
@@ -204,6 +219,7 @@ export default function Home() {
               <p className="eyebrow">{activeCategory.name} · {activeCategory.descriptor}</p>
               <h3 className={activeCategory.fontClass}>{activeCategory.title}</h3>
               <p className="detail-definition">{activeCategory.definition}</p>
+              {activeCategory.standIn && <p className="stand-in-note">{activeCategory.standIn}</p>}
               <div className="detail-columns">
                 <div><span>形态线索</span><ul>{activeCategory.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div>
                 <div><span>常见场景</span><ul>{activeCategory.applications.map((application) => <li key={application}>{application}</li>)}</ul></div>
@@ -213,11 +229,39 @@ export default function Home() {
           </article>
         </section>
 
+        <section className="anatomy-section" id="anatomy" aria-labelledby="anatomy-title">
+          <div className="section-topline"><span className="section-code">02 / LOOK AT THE STROKE</span><span className="topline-rule" /><span className="section-state">字形解剖</span></div>
+          <div className="anatomy-heading">
+            <div>
+              <p className="eyebrow">先看见，再命名</p>
+              <h2 id="anatomy-title">三个地方，<br />足够分辨一张字。</h2>
+            </div>
+            <p>不必先背术语。看收笔有没有停一下，看笔画围出的空白紧不紧，再看同一句话换粗细之后重心有没有变。</p>
+          </div>
+          <div className="anatomy-grid">
+            <article>
+              <span>01 收笔</span>
+              <p className="anatomy-pair"><b className="font-serif">永</b><b className="font-sans">永</b></p>
+              <p>左边的横画收住，右边的笔画走到尽头就停。收笔会让一行字有停顿。</p>
+            </article>
+            <article>
+              <span>02 中宫</span>
+              <p className="anatomy-pair"><b className="font-serif">国</b><b className="font-sans">国</b></p>
+              <p>外框差不多，里面的空白不一样。中宫松的字显得开，中宫紧的字显得密。</p>
+            </article>
+            <article>
+              <span>03 字重</span>
+              <WeightSample />
+              <p>字重变了，这句话占的视觉重量也变了。粗不是更大声的同义词，它会把页面的重心拉低。</p>
+            </article>
+          </div>
+        </section>
+
         <section className="comparison-section" id="compare" aria-labelledby="compare-title">
           <img className="comparison-art" src={ASSETS.comparison} alt="叠放的字体校样卡和测量线" />
           <div className="comparison-veil" />
           <div className="comparison-content">
-            <div className="section-topline on-dark"><span className="section-code">02 / SAME WORDS, DIFFERENT VOICES</span><span className="topline-rule" /><span className="section-state">同文对比</span></div>
+            <div className="section-topline on-dark"><span className="section-code">03 / SAME WORDS, DIFFERENT VOICES</span><span className="topline-rule" /><span className="section-state">同文对比</span></div>
             <div className="compare-heading">
               <div><p className="eyebrow">效果对比</p><h2 id="compare-title">写一句你的话，<br /><i>看它如何变声。</i></h2></div>
               <p>把同一段内容同时放进四类字体中。这里没有标准答案；你看到的差异，就是字体美学开始变得具体的时刻。</p>
@@ -239,6 +283,7 @@ export default function Home() {
                 >
                   <span className="comparison-meta"><i>{category.no}</i><em>{category.english}</em></span>
                   <p className={category.fontClass}>{previewText}</p>
+                  {category.standIn && <small className="stand-in-note on-card">{category.standIn}</small>}
                   <span className="comparison-label">{category.name}<ChevronDown size={13} /></span>
                 </button>
               ))}
@@ -250,7 +295,7 @@ export default function Home() {
         <section className="tips-section" id="tips" aria-labelledby="tips-title">
           <div className="tips-image"><img src={ASSETS.specimen} alt="纸张上的抽象字形标本和校样记号" /><span>FIELD NOTE / 03</span></div>
           <div className="tips-copy">
-            <p className="section-code">03 / READ THE SHAPE</p>
+            <p className="section-code">04 / READ THE SHAPE</p>
             <h2 id="tips-title">下一次看字体，<br />不妨先问这三件事。</h2>
             <div className="question-list">
               <article><span>01</span><div><h3>它的笔画在说什么？</h3><p>粗细对比、收笔与转折，会让文字显得庄重、克制，或轻盈灵动。</p></div></article>
@@ -269,9 +314,16 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-brand"><img src={ASSETS.mark} alt="" /><span>字研室<br /><i>TYPE ATLAS</i></span></div>
-        <p>《字体的魅力》是一份面向初学者的互动字体美学科普读物。</p>
-        <div className="footer-links"><a href="/learn">学习路径</a><a href="/glossary">术语表</a><a href="/contribute">参与项目</a><a href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>回到首页 <ArrowUpRight size={15} /></a></div>
+        <div className="footer-brand"><img src={ASSETS.mark} alt="" /><span>字体志<br /><i>字体的魅力</i></span></div>
+        <p>字体志是一份面向初学者的互动字体美学科普。这一期叫《字体的魅力》。</p>
+        <div className="footer-links">
+          <a href="https://tom61-bl.github.io/light-shadow/">光影志</a>
+          <a href="https://tom61-bl.github.io/color-atlas/">色彩志</a>
+          <a href={sitePath("/learn")}>学习路径</a>
+          <a href={sitePath("/glossary")}>术语表</a>
+          <a href={sitePath("/contribute")}>参与项目</a>
+          <a href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>回到首页 <ArrowUpRight size={15} /></a>
+        </div>
       </footer>
     </div>
   );

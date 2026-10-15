@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, RotateCcw, Sparkles } from "lucide-react";
+import { sitePath } from "@/lib/sitePath";
 
 type QuizResult = {
   key: string;
@@ -185,14 +186,14 @@ export default function Quiz() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-[#f2f0e9]/90 backdrop-blur-sm border-b border-[#1a1a1a]/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/font-magazine-v1/" className="font-serif text-xl font-bold tracking-tight">字研室</a>
+          <a href={sitePath("/")} className="font-serif text-xl font-bold tracking-tight">字体志</a>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="/font-magazine-v1/" className="hover:opacity-60 transition">首页</a>
-            <a href="/font-magazine-v1/latin" className="hover:opacity-60 transition">拉丁字体</a>
-            <a href="/font-magazine-v1/quiz" className="font-medium border-b-2 border-[#1a1a1a] pb-0.5">字体测验</a>
-            <a href="/font-magazine-v1/pairing" className="hover:opacity-60 transition">配对与品牌</a>
-            <a href="/font-magazine-v1/learn" className="hover:opacity-60 transition">学习路径</a>
-            <a href="/font-magazine-v1/glossary" className="hover:opacity-60 transition">术语表</a>
+            <a href={sitePath("/")} className="hover:opacity-60 transition">首页</a>
+            <a href={sitePath("/latin")} className="hover:opacity-60 transition">拉丁字体</a>
+            <a href={sitePath("/quiz")} className="font-medium border-b-2 border-[#1a1a1a] pb-0.5">字体测验</a>
+            <a href={sitePath("/pairing")} className="hover:opacity-60 transition">配对与品牌</a>
+            <a href={sitePath("/learn")} className="hover:opacity-60 transition">学习路径</a>
+            <a href={sitePath("/glossary")} className="hover:opacity-60 transition">术语表</a>
           </div>
         </div>
       </nav>
@@ -313,7 +314,7 @@ export default function Quiz() {
       {/* Footer */}
       <footer className="border-t border-[#1a1a1a]/10 py-8 mt-16">
         <div className="max-w-6xl mx-auto px-6 text-center text-xs text-[#1a1a1a]/40">
-          字体的魅力 · 字研室 — Educational Purpose
+          字体志 · 字体的魅力 — Educational Purpose
         </div>
       </footer>
     </div>

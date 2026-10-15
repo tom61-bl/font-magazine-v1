@@ -4,10 +4,11 @@
 import { useMemo, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, ScanEye, X } from "lucide-react";
 import SourcePanel from "@/components/SourcePanel";
+import { publicAsset, sitePath } from "@/lib/sitePath";
 
 const ASSETS = {
-  hero: "/assets/type-atlas-latin-hero.jpg",
-  mark: "/assets/type-atlas-mark.png",
+  hero: publicAsset("type-atlas-latin-hero.jpg"),
+  mark: publicAsset("type-atlas-mark.png"),
 };
 
 type LatinCategory = {
@@ -33,7 +34,7 @@ const CATEGORIES: LatinCategory[] = [
     name: "Serif",
     chinese: "衬线体",
     sample: "A quiet page can still speak with authority.",
-    label: "Garamond · Baskerville · Georgia",
+    label: "样张：Libre Baskerville · 同类还有 Garamond、Georgia",
     title: "Small finishing strokes give reading a cadence.",
     summary: "Serifs are the short finishing strokes attached to letterforms. Their contrast, rhythm and small terminals can make a page feel editorial, considered and rooted in print culture.",
     markers: ["Look for small strokes at the ends of letters", "Watch thick–thin contrast in stems and curves", "Notice how the baseline feels paced rather than flat"],
@@ -48,7 +49,7 @@ const CATEGORIES: LatinCategory[] = [
     name: "Sans Serif",
     chinese: "非衬线体",
     sample: "Clarity makes the message arrive without detours.",
-    label: "Helvetica · Futura · Space Grotesk",
+    label: "样张：Space Grotesk · 同类还有 Helvetica、Futura",
     title: "Without extra strokes, the outline speaks first.",
     summary: "Sans serif type removes the finishing strokes and lets a letter’s overall construction come forward. It can feel clear, contemporary and quick to scan—especially when space is limited.",
     markers: ["No serifs at stroke endings", "A clean, often even rhythm across letters", "The shape of the word reads quickly at small sizes"],
@@ -63,7 +64,7 @@ const CATEGORIES: LatinCategory[] = [
     name: "Slab Serif",
     chinese: "粗衬线体",
     sample: "Strong letters hold a headline in place.",
-    label: "Roboto Slab · Rockwell · Clarendon",
+    label: "样张：Roboto Slab · 同类还有 Rockwell、Clarendon",
     title: "Block-like serifs turn a voice into a poster.",
     summary: "Slab serifs keep the idea of a serif but make it heavier and more architectural. Their thick, often rectangular terminals can give short messages a sturdy, deliberate presence.",
     markers: ["Serifs are thick and visibly structural", "Low contrast makes forms feel dense and solid", "The word often holds attention from a distance"],
@@ -78,7 +79,7 @@ const CATEGORIES: LatinCategory[] = [
     name: "Script",
     chinese: "手写体",
     sample: "A small flourish can make a note feel personal.",
-    label: "Dancing Script · Lobster · Parisienne",
+    label: "样张：Dancing Script · 同类还有 Lobster、Parisienne",
     title: "When letters remember the hand that made them.",
     summary: "Script type takes visible cues from handwriting and calligraphy. Its slant, joins and flourishes can make a short phrase feel personal or ceremonial, but the same details make long passages harder to read.",
     markers: ["Letters may connect or lean together", "Stroke direction suggests a pen or brush", "Flourishes create emphasis and personality"],
@@ -93,7 +94,7 @@ const CATEGORIES: LatinCategory[] = [
     name: "Display",
     chinese: "展示体",
     sample: "Make the first glance count.",
-    label: "Bebas Neue · Impact · Decorative faces",
+    label: "样张：Bebas Neue · 同类还有 Impact 和其他展示体",
     title: "A distinctive outline is made for the first glance.",
     summary: "Display type puts character ahead of neutrality. It may be unusually narrow, wide, decorative or forceful, which helps a brief phrase become memorable—but makes it a poor carrier for dense body text.",
     markers: ["Proportion or silhouette is intentionally unusual", "The face holds attention at large sizes", "The visual idea is stronger than long-form comfort"],
@@ -123,19 +124,19 @@ export default function LatinTypography() {
   return (
     <div className="latin-atlas">
       <header className="site-header latin-header" aria-label="英文字体专题主导航">
-        <a className="brand-lockup" href="/" aria-label="返回中文字体专题">
+        <a className="brand-lockup" href={sitePath("/")} aria-label="返回中文字体专题">
           <img src={ASSETS.mark} alt="" className="brand-mark" />
-          <span className="brand-word"><b>字研室</b><em>TYPE ATLAS</em></span>
+          <span className="brand-word"><b>字体志</b><em>字体的魅力</em></span>
         </a>
         <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="英文字体专题章节">
           <button onClick={() => navigate("latin-families")}>认识五类</button>
           <button onClick={() => navigate("latin-compare")}>同文对比</button>
           <button onClick={() => navigate("latin-tips")}>观察字母</button>
-          <a className="topic-link" href="/">中文专题</a>
-          <a className="nav-plain-link" href="/quiz">字体测验</a>
-          <a className="nav-plain-link" href="/pairing">配对与品牌</a>
-          <a className="nav-plain-link" href="/learn">学习路径</a>
-          <a className="nav-plain-link" href="/contribute">参与项目</a>
+          <a className="topic-link" href={sitePath("/")}>中文专题</a>
+          <a className="nav-plain-link" href={sitePath("/quiz")}>字体测验</a>
+          <a className="nav-plain-link" href={sitePath("/pairing")}>配对与品牌</a>
+          <a className="nav-plain-link" href={sitePath("/learn")}>学习路径</a>
+          <a className="nav-plain-link" href={sitePath("/contribute")}>参与项目</a>
         </nav>
         <div className="header-tools">
           <span className="edition-chip"><span className="edition-dot" /> LATIN TYPE / 02</span>
@@ -174,7 +175,7 @@ export default function LatinTypography() {
             <aside className="latin-detail-meta"><span>SPECIMEN FILE</span><b>LAT / {active.no}</b><span>{active.name.toUpperCase()}</span></aside>
             <div className="latin-glyph-area"><span className={`latin-glyph ${active.fontClass}`}>{active.glyph}</span><span className="latin-baseline" /><span className="latin-cross">+</span></div>
             <div className="latin-detail-copy"><p className="eyebrow">{active.name} · {active.chinese}</p><h3 className={active.fontClass}>{active.title}</h3><p className="latin-summary">{active.summary}</p><div className="latin-detail-lists"><div><span>Look for</span><ul>{active.markers.map((marker) => <li key={marker}>{marker}</li>)}</ul></div><div><span>Works well in</span><ul>{active.settings.map((setting) => <li key={setting}>{setting}</li>)}</ul></div></div></div>
-            <aside className="latin-sentence"><span>SHORT SPECIMEN</span><b className={active.fontClass}>{active.sample}</b><p><ScanEye size={15} /> {active.cue}</p></aside>
+            <aside className="latin-sentence"><span>SHORT SPECIMEN</span><b className={active.fontClass}>{active.sample}</b><p><ScanEye size={15} /> {active.cue}</p><small className="stand-in-note">{active.label}</small></aside>
           </article>
         </section>
 
@@ -188,7 +189,7 @@ export default function LatinTypography() {
 
         <section className="latin-tips" id="latin-tips" aria-labelledby="latin-tips-title">
           <div className="latin-type-poster" aria-hidden="true"><span className="latin-poster-r latin-serif">R</span><span className="latin-poster-a latin-sans">a</span><span className="latin-poster-g latin-script">g</span><i>ANATOMY<br />OF A GLANCE</i></div>
-          <div className="latin-tips-copy"><p className="section-code">03 / READ THE LETTER</p><h2 id="latin-tips-title">下次看英文字体，<br />先问这三件事。</h2><div className="question-list"><article><span>01</span><div><h3>它的末端留下了什么？</h3><p>有无衬脚、衬脚的形状与粗细，都会改变字母的节奏与历史感。</p></div></article><article><span>02</span><div><h3>字母的骨架是松还是紧？</h3><p>观察字腔、x-height、字宽和重心。它们决定一行英文在页面上呼吸得多快。</p></div></article><article><span>03</span><div><h3>它适合读，还是适合被看见？</h3><p>长文需要稳定，短标题需要轮廓。让字体承担它真正擅长的任务。</p></div></article></div><a href="/">回到中文字体专题 <ArrowUpRight size={16} /></a></div>
+          <div className="latin-tips-copy"><p className="section-code">03 / READ THE LETTER</p><h2 id="latin-tips-title">下次看英文字体，<br />先问这三件事。</h2><div className="question-list"><article><span>01</span><div><h3>它的末端留下了什么？</h3><p>有无衬脚、衬脚的形状与粗细，都会改变字母的节奏与历史感。</p></div></article><article><span>02</span><div><h3>字母的骨架是松还是紧？</h3><p>观察字腔、x-height、字宽和重心。它们决定一行英文在页面上呼吸得多快。</p></div></article><article><span>03</span><div><h3>它适合读，还是适合被看见？</h3><p>长文需要稳定，短标题需要轮廓。让字体承担它真正擅长的任务。</p></div></article></div><a href={sitePath("/")}>回到中文字体专题 <ArrowUpRight size={16} /></a></div>
         </section>
 
         <SourcePanel chapter="English chapter · The Shape of Letters" updated="2026-08-20" sources={[
@@ -198,7 +199,7 @@ export default function LatinTypography() {
         ]} />
       </main>
 
-      <footer className="site-footer"><div className="footer-brand"><img src={ASSETS.mark} alt="" /><span>字研室<br /><i>TYPE ATLAS</i></span></div><p>《The Shape of Letters》是一份面向初学者的互动英文字体美学科普读物。</p><div className="footer-links"><a href="/learn">学习路径</a><a href="/glossary">术语表</a><a href="/contribute">参与项目</a><a href="/">中文专题 <ArrowUpRight size={15} /></a></div></footer>
+      <footer className="site-footer"><div className="footer-brand"><img src={ASSETS.mark} alt="" /><span>字体志<br /><i>字体的魅力</i></span></div><p>字体志的英文一章，看拉丁字母的形状。</p><div className="footer-links"><a href="https://tom61-bl.github.io/light-shadow/">光影志</a><a href="https://tom61-bl.github.io/color-atlas/">色彩志</a><a href={sitePath("/learn")}>学习路径</a><a href={sitePath("/glossary")}>术语表</a><a href={sitePath("/contribute")}>参与项目</a><a href={sitePath("/")}>中文专题 <ArrowUpRight size={15} /></a></div></footer>
     </div>
   );
 }

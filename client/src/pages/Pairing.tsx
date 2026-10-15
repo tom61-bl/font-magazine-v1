@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { Layers, Building2 } from "lucide-react";
+import { sitePath } from "@/lib/sitePath";
 
 type Pairing = {
   num: string;
@@ -113,7 +114,7 @@ type Brand = {
   bg: string;
   color: string;
   logoText: string;
-  logoCss: string;
+  logoCss: CSSProperties;
   desc: string;
 };
 
@@ -128,7 +129,7 @@ const BRANDS: Brand[] = [
     bg: "#1a1a1a",
     color: "#fff",
     logoText: "V",
-    logoCss: "'Playfair Display', serif; font-style: italic; font-size: 1.5rem;",
+    logoCss: { fontFamily: "'Playfair Display', serif", fontStyle: "italic", fontSize: "1.5rem" },
     desc: "Vogue 选择了 Bodoni——以极端粗细对比著称的字体。纤细的衬脚和厚重的笔画形成强烈戏剧感，完美契合时尚杂志追求优雅与奢华的品牌定位。",
   },
   {
@@ -141,7 +142,7 @@ const BRANDS: Brand[] = [
     bg: "#003087",
     color: "#fff",
     logoText: "BMW",
-    logoCss: "'Lato', sans-serif; font-weight: 900;",
+    logoCss: { fontFamily: "'Lato', sans-serif", fontWeight: 900 },
     desc: "宝马使用高度几何化、精确的 Helvetica 风格字体。没有任何衬脚，没有任何多余装饰——完美的机械感与品牌「终极驾驶机器」的定位高度一致。",
   },
   {
@@ -154,7 +155,7 @@ const BRANDS: Brand[] = [
     bg: "#fff",
     color: "#1a1a1a",
     logoText: "PENGUIN",
-    logoCss: "'Cormorant Garamond', serif; font-weight: bold; font-size: 0.7rem;",
+    logoCss: { fontFamily: "'Cormorant Garamond', serif", fontWeight: "bold", fontSize: "0.7rem" },
     desc: "Penguin Books 在 1935 年选择了 Garamond 作为品牌字体。这个决定定义了这个出版帝国数十年的视觉形象——温暖、可信、富有书卷气。",
   },
   {
@@ -167,7 +168,7 @@ const BRANDS: Brand[] = [
     bg: "#c0392b",
     color: "#fff",
     logoText: "NYC",
-    logoCss: "'Lato', sans-serif; font-weight: 900;",
+    logoCss: { fontFamily: "'Lato', sans-serif", fontWeight: 900 },
     desc: "纽约地铁识别系统采用 Helvetica 粗体，在高速移动、嘈杂的地铁环境中保持高度可读性。功能性第一的原则，让这套视觉系统在 50 年后依然在用。",
   },
   {
@@ -180,7 +181,7 @@ const BRANDS: Brand[] = [
     bg: "#1a1a1a",
     color: "#fff",
     logoText: "VOLKSWAGEN",
-    logoCss: "'Lato', sans-serif; font-weight: 300; font-size: 0.5rem; letter-spacing: 0.1em;",
+    logoCss: { fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "0.5rem", letterSpacing: "0.1em" },
     desc: "大众汽车选择了 Futura——完全由几何形状构建的字体。圆形、三角形、直线，与汽车的机械美学高度呼应。",
   },
   {
@@ -193,7 +194,7 @@ const BRANDS: Brand[] = [
     bg: "#f5c518",
     color: "#1a1a1a",
     logoText: "ABSOLUT",
-    logoCss: "'Lato', sans-serif; font-weight: bold; font-size: 0.6rem;",
+    logoCss: { fontFamily: "'Lato', sans-serif", fontWeight: "bold", fontSize: "0.6rem" },
     desc: "Absolut 的品牌字体与酒瓶形状高度契合——细长、高挑、一切都是垂直的。Futura 的几何感让品牌在数千款酒瓶中脱颖而出。",
   },
   {
@@ -206,7 +207,7 @@ const BRANDS: Brand[] = [
     bg: "#1a1a1a",
     color: "#fff",
     logoText: "The New\nYorker",
-    logoCss: "'Cormorant Garamond', serif; font-style: italic;",
+    logoCss: { fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" },
     desc: "《纽约客》选择了高度定制化的衬线字体，浑圆的字形和手写感传达了杂志的文人气质和幽默感，成为杂志排版的教科书级案例。",
   },
   {
@@ -219,7 +220,7 @@ const BRANDS: Brand[] = [
     bg: "#a51c30",
     color: "#fff",
     logoText: "HARVARD\nUNIVERSITY",
-    logoCss: "'Lato', sans-serif; font-size: 0.5rem; letter-spacing: 0.05em;",
+    logoCss: { fontFamily: "'Lato', sans-serif", fontSize: "0.5rem", letterSpacing: "0.05em" },
     desc: "哈佛大学的视觉系统以 Baskerville 为基础，其古典优雅与学术权威感完美契合。一个好的字体选择，能让数百年的学术传统在视觉上一眼可辨。",
   },
   {
@@ -232,7 +233,7 @@ const BRANDS: Brand[] = [
     bg: "#f0f0f0",
     color: "#1a1a1a",
     logoText: "GITHUB",
-    logoCss: "'Courier New', monospace; font-size: 0.5rem; letter-spacing: 0.05em;",
+    logoCss: { fontFamily: "'Courier New', monospace", fontSize: "0.5rem", letterSpacing: "0.05em" },
     desc: "GitHub 的品牌字体融合了现代无衬线（Roboto 用于 UI）和等宽字体（程序员代码感）。这组选择精准对应了开发者社区的身份认同。",
   },
 ];
@@ -245,14 +246,14 @@ export default function Pairing() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-[#f2f0e9]/90 backdrop-blur-sm border-b border-[#1a1a1a]/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/font-magazine-v1/" className="font-serif text-xl font-bold tracking-tight">字研室</a>
+          <a href={sitePath("/")} className="font-serif text-xl font-bold tracking-tight">字体志</a>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="/font-magazine-v1/" className="hover:opacity-60 transition">首页</a>
-            <a href="/font-magazine-v1/latin" className="hover:opacity-60 transition">拉丁字体</a>
-            <a href="/font-magazine-v1/quiz" className="hover:opacity-60 transition">字体测验</a>
-            <a href="/font-magazine-v1/pairing" className="font-medium border-b-2 border-[#1a1a1a] pb-0.5">配对与品牌</a>
-            <a href="/font-magazine-v1/learn" className="hover:opacity-60 transition">学习路径</a>
-            <a href="/font-magazine-v1/glossary" className="hover:opacity-60 transition">术语表</a>
+            <a href={sitePath("/")} className="hover:opacity-60 transition">首页</a>
+            <a href={sitePath("/latin")} className="hover:opacity-60 transition">拉丁字体</a>
+            <a href={sitePath("/quiz")} className="hover:opacity-60 transition">字体测验</a>
+            <a href={sitePath("/pairing")} className="font-medium border-b-2 border-[#1a1a1a] pb-0.5">配对与品牌</a>
+            <a href={sitePath("/learn")} className="hover:opacity-60 transition">学习路径</a>
+            <a href={sitePath("/glossary")} className="hover:opacity-60 transition">术语表</a>
           </div>
         </div>
       </nav>
@@ -337,6 +338,7 @@ export default function Pairing() {
                   <p className="text-xs text-[#1a1a1a]/40 mb-3">{b.en}</p>
                   <div className="text-xs text-[#1a1a1a]/40 mb-1">使用字体</div>
                   <div className="text-sm font-medium mb-2">{b.font}</div>
+                  <div className="text-xs text-[#1a1a1a]/50 mb-2">页面上的字是替代样张，不是该品牌的字体文件。</div>
                   <div className="text-xl font-bold mb-3" style={{ fontFamily: b.css }}>{b.sample}</div>
                   <p className="text-xs text-[#1a1a1a]/50 leading-relaxed">{b.desc}</p>
                 </div>
@@ -349,7 +351,7 @@ export default function Pairing() {
       {/* Footer */}
       <footer className="border-t border-[#1a1a1a]/10 py-8 mt-16">
         <div className="max-w-6xl mx-auto px-6 text-center text-xs text-[#1a1a1a]/40">
-          字体的魅力 · 字研室 — Educational Purpose
+          字体志 · 字体的魅力 — Educational Purpose
         </div>
       </footer>
     </div>

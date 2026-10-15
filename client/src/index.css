@@ -1,6 +1,6 @@
 /* 活字标本册设计契约：暖档案纸承载科普阅读，深墨托起样张，朱砂只标记知识重点与选中状态。 */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Roboto+Slab:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -390,4 +390,34 @@ button:focus-visible,a:focus-visible { outline:2px solid var(--vermillion); outl
 @media (max-width:600px) { .education-header{min-height:65px;padding:0 7vw}.education-header nav{display:none}.education-hero{grid-template-columns:1fr;min-height:0;padding:67px 7vw 0;background:#e7e1d5}.education-hero-glyph{right:9vw;bottom:81px;font-size:250px}.education-hero aside{min-height:215px;margin-top:45px;padding:30px 0 31px;border-top:1px solid rgba(242,240,233,.25);border-left:0;background:#1b1c19}.learning-principle{grid-template-columns:30px 1fr;padding:58px 7vw}.learning-principle span{grid-column:2}.module-section{padding:61px 7vw}.module-list article{grid-template-columns:34px 37px 1fr;gap:10px}.module-number{font-size:23px}.module-icon{width:32px;height:32px}.learning-callout{grid-template-columns:31px 1fr;padding:47px 7vw}.learning-callout>a{grid-column:2;width:max-content}.education-footer{padding:27px 7vw}.source-panel{padding:62px 7vw}.source-panel-grid{grid-template-columns:1fr}.source-right{grid-column:auto}.source-meta,.source-links,.source-right{min-height:auto}.glossary-hero,.contribute-hero{padding:70px 7vw;background:#e7e1d5}.glossary-glyph{right:7vw;font-size:265px}.term-grid,.contribute-lanes{grid-template-columns:1fr;padding:0 7vw}.term-grid article{min-height:0}.glossary-footnote,.contribute-end{grid-template-columns:30px 1fr;padding:43px 7vw}.glossary-footnote a,.contribute-end a{grid-column:2}.contribute-lanes article{min-height:0;padding:27px 20px}.contribution-standards{padding:61px 7vw}.standards-grid{grid-template-columns:1fr}.contribute-end{gap:11px} }
 
 @media (max-width:900px) { .main-nav .topic-link{width:max-content;margin-top:5px}.latin-hero{min-height:650px}.latin-hero>img{object-position:61% center}.latin-hero-wash{background:linear-gradient(90deg,rgba(242,240,233,.99) 0%,rgba(242,240,233,.93) 61%,rgba(242,240,233,.2) 100%)}.latin-hero-content{width:min(650px,84vw);min-height:650px;padding:82px 0 55px 11vw}.latin-axis{display:none}.latin-intro{grid-template-columns:1fr;gap:19px;padding:76px 9vw}.latin-intro>div{max-width:500px}.latin-family-heading{align-items:start;flex-direction:column;gap:21px}.latin-selector{grid-template-columns:repeat(3,1fr)}.latin-detail{grid-template-columns:70px .7fr 1.3fr}.latin-sentence{grid-column:2/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}.latin-sentence>b{margin:0}.latin-sentence p{margin:0}.latin-compare{padding:77px 9vw}.latin-compare-heading{align-items:start;flex-direction:column;gap:20px}.latin-controls{grid-template-columns:1fr}.latin-compare-grid{grid-template-columns:repeat(3,1fr)}.latin-tips{grid-template-columns:1fr}.latin-type-poster{min-height:400px}.latin-tips-copy{padding:75px 9vw} }
+.anatomy-section { padding: 106px 4.3vw 88px; background: var(--paper); }
+.anatomy-heading { display: flex; align-items: end; justify-content: space-between; gap: 48px; max-width: 1190px; margin: 48px auto 28px; }
+.anatomy-heading h2 { margin: 0; font-family: "Noto Serif SC", serif; font-size: clamp(37px, 4vw, 56px); font-weight: 800; letter-spacing: -0.06em; line-height: 1.15; }
+.anatomy-heading > p { max-width: 360px; margin: 0; color: #53534c; font-size: 14px; line-height: 1.9; }
+.anatomy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1190px; margin: 0 auto; }
+.anatomy-grid article { border: 1px solid var(--line); background: var(--paper-deep); padding: 22px; }
+.anatomy-grid article > span { color: var(--vermillion); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+.anatomy-grid article > p:last-child { margin: 0; color: #53534c; font-size: 14px; line-height: 1.8; }
+.anatomy-pair { display: flex; gap: 18px; margin: 12px 0 16px; }
+.anatomy-pair b { font-size: 92px; line-height: 1; font-weight: 500; }
+.weight-sample b { display: block; margin: 16px 0 8px; font-family: "Noto Sans SC", sans-serif; font-size: 42px; line-height: 1.1; }
+.weight-sample label, .reading-copy label { display: grid; grid-template-columns: 1fr auto; gap: 8px; font-size: 13px; }
+.weight-sample input, .reading-copy input { grid-column: 1 / -1; width: 100%; }
+.stand-in-note { display: block; margin-top: 10px; color: #6c6b63; font-size: 12px; line-height: 1.6; }
+.comparison-card .stand-in-note { margin: 8px 0 4px; }
+.reading-lab { display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 40px; align-items: start; padding: 88px 10.2vw 104px; background: #e7e1d5; }
+.reading-copy h2 { margin: 8px 0 18px; font-family: "Noto Serif SC", serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.2; }
+.reading-copy label { margin-top: 16px; }
+.reading-sample { margin: 0; padding: 28px; background: #f7f4ee; border: 1px solid var(--line); font-family: "Noto Serif SC", serif; }
+
+@media (max-width: 800px) {
+  .anatomy-heading, .reading-lab { display: grid; grid-template-columns: 1fr; }
+  .anatomy-grid { grid-template-columns: 1fr; }
+  .anatomy-section, .reading-lab { padding-left: 7vw; padding-right: 7vw; }
+}
+@media (max-width: 600px) {
+  .education-header { height: auto; flex-wrap: wrap; align-items: flex-start; padding-top: 12px; padding-bottom: 12px; }
+  .education-header nav { display: flex; flex-wrap: wrap; gap: 8px 14px; width: 100%; }
+}
+
 @media (max-width:600px) { .latin-hero{min-height:610px}.latin-hero-content{width:89vw;min-height:610px;padding-left:8vw}.latin-index{left:8vw}.latin-hero-content>p{max-width:330px;font-size:13px}.latin-hero-note{margin-top:29px}.latin-intro{padding:64px 7vw}.latin-families{padding:74px 6vw}.latin-family-heading{margin-top:46px}.latin-selector{grid-template-columns:repeat(2,1fr);margin-top:33px}.latin-tab{min-height:142px;padding:14px 12px}.latin-tab b{font-size:23px}.latin-tab:nth-child(4) b{font-size:27px}.latin-tab:last-child{grid-column:1/-1;min-height:115px}.latin-detail{grid-template-columns:45px 1fr}.latin-detail-meta{padding:12px 8px}.latin-detail-copy{grid-column:2;padding:30px 22px 25px}.latin-glyph-area{min-height:210px}.latin-glyph{font-size:173px}.latin-sentence{grid-column:1/-1;grid-template-columns:1fr;padding:21px}.latin-sentence>b{margin-top:3px}.latin-sentence p{margin-top:8px}.latin-detail-lists{grid-template-columns:1fr;gap:14px}.latin-compare{padding:65px 6vw}.latin-compare-heading{margin-top:46px}.latin-compare-grid{grid-template-columns:1fr}.latin-compare-card{min-height:202px}.latin-compare-card p{-webkit-line-clamp:3}.latin-observation{align-items:flex-start;flex-wrap:wrap}.latin-observation button{width:100%;margin-left:0;text-align:left}.latin-type-poster{min-height:330px}.latin-tips-copy{padding:64px 7vw} }
